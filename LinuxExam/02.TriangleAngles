@@ -1,0 +1,55 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+#define PI 3.14159265
+
+struct point {
+	int x;
+	int y;
+	int z;
+};
+
+
+int coordinatesSplit(char * coords, struct point * points)
+{
+    char * pointer=coords;
+    points->x=atoi(strtok(pointer, ","));
+    points->y=atoi(strtok(NULL, ","));
+    points->z=atoi(strtok(NULL, ","));
+
+	return 0;
+}
+int main(void)
+{
+    char input[40];
+
+    fgets(input, 40, stdin);
+    struct point *pointA=(struct point*)malloc(sizeof(struct point));
+    struct point *pointB=(struct point*)malloc(sizeof(struct point));
+    struct point *pointC=(struct point*)malloc(sizeof(struct point));
+    char * firstPoint=strtok(input, ";");
+    char * secondPoint=strtok(NULL, ";");
+    char * thirdPoint=strtok(NULL, ";");
+    coordinatesSplit(firstPoint, pointA);
+    coordinatesSplit(secondPoint, pointB);
+    coordinatesSplit(thirdPoint, pointC);
+    double sideAB, sideBC, sideAC;
+    sideAB=sqrt(pow((pointA->x-pointB->x),2)+pow((pointA->y-pointB->y),2)
+                    +pow((pointA->z-pointB->z),2));
+    sideBC=sqrt(pow((pointB->x-pointC->x),2)+pow((pointB->y-pointC->y),2)
+                            +pow((pointB->z-pointC->z),2));
+    sideAC=sqrt(pow((pointA->x-pointC->x),2)+pow((pointA->y-pointC->y),2)
+                            +pow((pointA->z-pointC->z),2));
+    double val=180.0/PI;
+    double angleA=acos(((pow(sideAB,2)+pow(sideAC,2)-pow(sideBC,2))/
+            (2*(sideAB*sideAC))))*val;    
+    double angleB=acos(((pow(sideAB,2)+pow(sideBC,2)-pow(sideAC,2))/
+            (2*(sideAB*sideBC))))*val;
+    double angleC=180-(angleA+angleB);
+    printf("%d,%d,%d", (int)angleA, (int)angleB, (int)angleC);	
+
+    return 0;
+}
