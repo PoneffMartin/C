@@ -1,0 +1,16 @@
+1. Visual Studio
+A prdouct of Microsoft Corporation, mostly used by other development corporations to produce .NET products. It is very useful for beginners in programming, since it has
+many features such as "Intellisense", "Automatic code formatting", etc., which makes it easier to code.
+
+2. Eclipse
+Good alternative of Visual Studio. It is much simple regarding the interface and also can be fully extended. Eclipse is cross-platform IDE and it is free. 
+
+3. Code::Blocks
+Another fully extensible cross-platform IDE. It is much lighter when it comes to size, but still powerful. Code::Blocks supports C,C++, Fortran.
+
+4. NetBeans
+Oracle product developed with Java. Similar to other IDEs, NetBeans is extensible and supports languages like C,C++, HTML5, PHP, Ruby.
+
+5. XCode
+It is the Apple official development environment.It has all you need to create Apple applications. Apple products' users can build and run their Apps 
+directly on their device.

@@ -1,0 +1,17 @@
+1. Java
+Apart from C, Java is object-oriented programming language. Mostly used for enterprise software, games and mobile apps. It is cross-platform language which allows you
+to run Java projects on every OS.
+
+2. Ruby
+Object-oriented language, with focus on simplicity and easy to learn. No semicolons ending lines, and no "char" type. 
+
+3. C#
+It is a high-level, object-oriented programming language with many features, making it easy to use. C# code is compiled to byte code and then compiled into machine code.
+
+4. PHP
+PHP is script language used for web applications. It is easy to develop and can be used on many OSs. 
+
+5. Python 
+Python is interactive, object-oriented programming language. Python programs; source code is often much shorter than C for example. Dynamic typing means that data's type
+is defined during run.
+
