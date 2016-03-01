@@ -1,0 +1,1 @@
+cmd_/home/mponev/LinuxExam/proc/proc.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/mponev/LinuxExam/proc/proc.ko /home/mponev/LinuxExam/proc/proc.o /home/mponev/LinuxExam/proc/proc.mod.o
