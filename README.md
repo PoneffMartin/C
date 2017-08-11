@@ -6,7 +6,6 @@ Conversions of smaller unsigned integer types to larger unsigned integer types i
 * always safe
 * typically accomplished by zero-extending the value
 
-E.g
 ```c
 unsigned char a = 5; // 0b0000 0101
 unsigned short b = a; // 0b0000 0000 0000 0101
@@ -16,7 +15,6 @@ When a larger unsigned integer is converted to a smaller unsigned integer type t
 * larger value is truncated
 * low-order bits are preserved
 
-E.g
 ```c
 unsigned short a = 1024 // 0b0000 0100 0000 0000
 unsigned char b = (unsigned char) a // Value is truncated. 0b0000 0000
@@ -27,7 +25,6 @@ When unsigned integer types are converted to the corresponding signed integer ty
 * the high-order bit becomes the sign bit
 * If the sign bit is set, both the sign and magnitude of the value changes
 
-E.g
 ```c
 // Output is "not equal"
 unsigned char a = 0xFF; // 0b1111 1111 or 255
