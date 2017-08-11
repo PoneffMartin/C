@@ -46,8 +46,8 @@ else
 /**
  * Notice however that the following block works as expected and the output is "equal".
  */
-unsigned char a = 0x7F; // 0b0111 111 or 127
-char b = 0x7F; // The high order  
+unsigned char a = 0x7F; // 0b0111 1111 or 127
+char b = 0x7F; // 0b0111 1111 or 127
 
 /**
  * When a is converted to signed int nothing special happens, it simply remains 127 as signed int.
@@ -55,7 +55,7 @@ char b = 0x7F; // The high order
  * the new signed int value is filled with zeroes which results in the same value 127.
  */
 if (a == b)
-	printf("equal");
+	printf("equal\n");
 else 
-	printf("not equal");
+	printf("not equal\n");
 ```
