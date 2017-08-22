@@ -92,7 +92,7 @@ When signed integers are converted to unsigned integers:
 * If the value of the signed integer is not negative, the value is unchanged.
 * If the value is negative, the resulting unsigned value is evaluated as a large, signed integer
 
-| From | To              |                           Method                            |
+| From  | To             |                           Method                            |
 | ------|----------------|-------------------------------------------------------------|
 | char  | short          | Sign extend                                                 |
 | char  | long           | Sign extend                                                 |
@@ -109,3 +109,12 @@ When signed integers are converted to unsigned integers:
 | long  | unsigned char  | Preserve low-order bits (Data loss)                         |
 | long  | unsigned short | Preserve low-order bits (Data loss)                         |
 | long  | unsigned long  | Preserve pattern; high-order bit loses function as sign bit |
+
+# Bitmask Macros
+
+A simple trick to avoid errors when defining bitmasks
+
+```c
+#define BIT(X)          (1 << (X))
+#define GPIO_SET        BIT(22) // This sets the bit at position 22 to 1. (Could be any other valid bit position).
+```
