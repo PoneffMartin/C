@@ -118,3 +118,9 @@ A simple trick to avoid errors when defining bitmasks
 #define BIT(X)          (1 << (X))
 #define GPIO_SET        BIT(22) // This sets the bit at position 22 to 1. (Could be any other valid bit position).
 ```
+# Print precision
+A width or precision may be specified as  \*, in which case the value is computed by converting the next argument (which must be an int). 
+For example, to print at most max characters from a string s:
+```c
+printf("%.*s", max, s);
+```
